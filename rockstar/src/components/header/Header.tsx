@@ -2,10 +2,25 @@ import RLogo from '../../assets/RLogo.svg'
 import arrowDown from '../../assets/arrow_drop_down.svg'
 import search from '../../assets/searchIcon.svg'
 import login from '../../assets/loginIcon.svg'
+import {useState,useEffect} from "react";
 
 const Header:any = () => {
+
+    const [background,setBackground] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > window.innerHeight ) {
+                setBackground(true);
+            } else {
+                setBackground(false);
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <header className='w-full pt-5 pb-5 pl-20 pr-20 bg-black flex items-center justify-between'>
+        <header className={`fixed z-50 top-0 ${background ? "bg-black" : "bg-transparent"} w-full pt-5 pb-5 pl-20 pr-20 bg-black flex items-center justify-between`}>
 
             <div className='flex items-center justify-between gap-12'>
                 <img className='cursor-pointer' src={RLogo} alt='RLogo'></img>

@@ -2,5 +2,5 @@
     box-sizing: border-box;
 }
 #root{
-    height: 100vH;
+    min-height: 100vH;
 }
