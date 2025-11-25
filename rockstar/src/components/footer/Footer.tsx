@@ -9,7 +9,7 @@ import "./Footer.css"
 
 const Footer = () => {
     return (
-        <footer className='w-full pt-10 pb-10 pl-20 pr-20 bg-black flex items-center justify-between'>
+        <footer className='w-full pt-10 pb-10 pl-[6%] pr-[6%] bg-black flex items-center justify-between'>
 
             <div className='flex gap-8'>
                 <img src={rockstarLogo}/>
@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
             </div>
 
-            <ul className='flex justify-between gap-8'>
+            <ul className='flex justify-between gap-4'>
                 <li className='cursor-pointer'><img src={twitch}/></li>
                 <li className='cursor-pointer'><img src={instagram}/></li>
                 <li className='cursor-pointer'><img src={twitter}/></li>

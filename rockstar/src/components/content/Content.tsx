@@ -3,8 +3,8 @@ import GTAOnline from '../../assets/GTAOnline.svg'
 import REDII from '../../assets/REDII.svg'
 import REDOnline from '../../assets/REDOnline.svg'
 import GTA6Game from '../../assets/GTA6Game.svg'
-// import GTACAR from '../../assets/GTACAR.svg'
-// import rockstarTrailer from '../../assets/ROCKSTARTrailer.svg'
+import GTACAR from '../../assets/GTACAR.svg'
+import rockstarTrailer from '../../assets/ROCKSTARTrailer.svg'
 import backgroundColor from '../../assets/backgroundColor.svg'
 import gamesLauncher from '../../assets/gamesLauncher.svg'
 import secondLogo from '../../assets/secondLogo.svg'
@@ -19,11 +19,11 @@ const Content = () => {
     }
 
     return (
-        <main className='bg-[#101010] w-full pt-10 pb-10 pl-20 pr-20 flex flex-col justify-between gap-16'>
+        <main className='bg-[#101010] w-full pt-10 pb-10 pl-[6%] pr-[6%] flex flex-col justify-between gap-16'>
 
             <section className='w-full flex flex-col items-center justify-between gap-8'>
 
-                <div className='flex justify-between items-center w-full'>
+                <div className='flex flex-col gap-6 lg:gap-0 lg:flex-row justify-between items-center w-full'>
                     <h1 className='text-white text-5xl font-extrabold'>Jogos em Destaque</h1>
                     <ul className='flex justify-between gap-6'>
                         <li className='bg-[#606060] rounded-[100px] pt-2 pb-2 pr-4 pl-4 text-white'>PC</li>
@@ -47,22 +47,38 @@ const Content = () => {
 
                 <h1 className='text-5xl font-extrabold text-white'>Últimas Notícias</h1>
 
-                <div className=''>
+                <div className='flex items-center gap-16 justify-between'>
 
-                    <div className='w-2/3 flex flex-col'>
+                    <div className='flex flex-col items-start w-2/3'>
+                        <img className='rounded-t-2xl rounded-tl-2xl' src={GTA6Game} alt='GTA6Game'/>
 
-                        <div className='overflow-hidden '>
-                            <img className='' src={GTA6Game} alt='GTA6Game'/>
-                        </div>
-
-                        <div className='pl-10 bg-black rounded-b-2xl rounded-bl-2xl pb-6 pt-6'>
+                        <div className='pl-10 w-full bg-black rounded-b-2xl rounded-bl-2xl pb-6 pt-6'>
                             <h1 className='text-white font-medium text-[32px] leading-[150%]'>Grand Theft Auto VI - Veja o 1º trailer agora</h1>
                             <span className='text-[#797979] font-light text-[16px] leading-[150%]'>Rockstar Games 5 de dezembro de 2023</span>
                         </div>
-
                     </div>
 
-                    <div className='w-1/3 flex flex-col gap-6'>
+                    <div className='flex flex-col gap-16 w-1/3'>
+
+                        <div className='flex flex-col items-start'>
+                            <img className='rounded-t-2xl rounded-tl-2xl w-full' src={rockstarTrailer} alt='GTA6Game'/>
+
+                            <div className='pl-6 w-full bg-black rounded-b-2xl rounded-bl-2xl pb-6 pt-6'>
+                                <h1 className='text-white font-medium text-[13px] leading-[150%]'>1º Trailer. Terça-feira, 5 de Dezembro. 9h Et.</h1>
+                                <span className='text-[#797979] font-light text-[12px] leading-[150%]'>Rockstar Games 5 de dezembro de 2023</span>
+                            </div>
+                        </div>
+
+                        <div className='flex flex-col items-start'>
+                            <img className='rounded-t-2xl rounded-tl-2xl w-full ' src={GTACAR} alt='GTA6Game'/>
+
+                            <div className='pl-6 w-full bg-black rounded-b-2xl rounded-bl-2xl pb-6 pt-6'>
+                                <h1 className='text-white font-medium text-[13px] leading-[150%]'>1º Trailer. Terça-feira, 5 de Dezembro. 9h Et.</h1>
+                                <span className='text-[#797979] font-light text-[12px] leading-[150%]'>Rockstar Games 5 de dezembro de 2023</span>
+                            </div>
+                        </div>
+
+
 
                     </div>
 
@@ -71,7 +87,7 @@ const Content = () => {
 
             </section>
 
-            <section style={{backgroundImage:`url(${backgroundColor})`}} className={`w-full bg-[${backgroundColor}] bg-no-repeat bg-cover flex items-center justify-between pt-10 pb-10 pl-12 rounded-2xl`}>
+            <section style={{backgroundImage:`url(${backgroundColor})`}} className={`w-full bg-no-repeat bg-cover flex items-center justify-between pt-10 pb-10 pl-[4%] rounded-2xl`}>
 
                 <div className='flex flex-col gap-6 items-start justify-between'>
 
@@ -86,9 +102,7 @@ const Content = () => {
 
                 </div>
 
-                <div className='overflow-hidden'>
-                    <img className='' src={gamesLauncher} alt='secondLogo'/>
-                </div>
+                    <img className='w-[60%] h-[80%]' src={gamesLauncher} alt='secondLogo'/>
 
             </section>
 
