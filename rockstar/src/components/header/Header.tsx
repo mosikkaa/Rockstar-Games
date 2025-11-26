@@ -6,9 +6,9 @@ import {useState,useEffect} from "react";
 
 const Header:any = () => {
 
-    const [background,setBackground] = useState(false)
+    const [background,setBackground] = useState<boolean>(false)
 
-    useEffect(() => {
+    useEffect(():void => {
         const handleScroll = () => {
             if (window.scrollY > window.innerHeight ) {
                 setBackground(true);
