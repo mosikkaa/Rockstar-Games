@@ -38,12 +38,12 @@ const Header:any = () => {
                 </ul>
             </div>
 
-            <div className='flex items-center justify-between gap-6'>
+            <div className='flex relative items-center justify-between gap-6'>
                 <button className='bg-[#FCAF17] pr-5 pl-5 pb-3 pt-3 text-black rounded-xl'>Baixe o Launcher</button>
                 <img className='cursor-pointer' src={search} alt='search'></img>
                 <img className='cursor-pointer' src={login} alt='login'></img>
-                <FontAwesomeIcon icon={faBars} onClick={handleClick} className='relative md:hidden! text-black block text-3xl cursor-pointer'/>
-                <ul className={`md:hidden mt-50  ${click ? 'flex' : 'hidden'} right-[2%] absolute flex-col flex-wrap gap-8`}>
+                <FontAwesomeIcon icon={faBars} onClick={handleClick} className='md:hidden! text-black block text-3xl cursor-pointer'/>
+                <ul className={`md:hidden mt-50  ${click ? 'flex' : 'hidden'} right-[0%] absolute flex-col flex-wrap gap-8`}>
                     <li className='cursor-pointer text-white flex'>Jogos <img src={arrowDown} alt='arrowDown'/> </li>
                     <li className='cursor-pointer text-white flex'>Loja</li>
                     <li className='cursor-pointer text-white flex'>Ajuda</li>
