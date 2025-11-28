@@ -84,7 +84,7 @@ const Content = () => {
                 </div>
             </section>
 
-            <section style={{backgroundImage:`url(${backgroundColor})`}} className={`w-full bg-no-repeat bg-cover sm:flex-col md:flex-row flex items-center justify-between pt-10 pb-10 pl-[4%] rounded-2xl`}>
+            <section style={{backgroundImage:`url(${backgroundColor})`}} className={`w-full bg-no-repeat bg-cover gap-8 flex-col md:flex-row flex items-center justify-between pt-10 pb-10 pl-[4%] rounded-2xl`}>
                 <div className='flex flex-col gap-6 items-start justify-between'>
                     <div className='flex-col lg:items-center lg:flex-row flex items-start gap-6 font-extrabold text-[41.57px] leading-[120%] '>
                         <img src={secondLogo} alt='secondLogo'/>
@@ -93,7 +93,7 @@ const Content = () => {
                     <span className='font-medium text-[32px] leading-[150%]'>Todos os seus jogos <br/> em um só lugar.</span>
                     <button className='rounded-lg bg-[#FCAF17] shadow-[0px 4px 16px 1px #00000052] font-extrabold text-[20px] leading-[150%] pr-18 pl-18 pt-4 pb-4'>Download</button>
                 </div>
-                <img className='sm:w-full md:w-[60%] h-[80%]' src={gamesLauncher} alt='secondLogo'/>
+                <img className='sm:w-[80%] md:w-[60%] h-[80%]' src={gamesLauncher} alt='secondLogo'/>
             </section>
 
 
