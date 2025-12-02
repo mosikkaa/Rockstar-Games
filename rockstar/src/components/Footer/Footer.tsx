@@ -5,7 +5,7 @@ import twitter from   '../../assets/twitter.svg'
 import facebook from   '../../assets/facebook.svg'
 import youtube from   '../../assets/youtube.svg'
 import "./Footer.css"
-
+import {Link} from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -15,10 +15,10 @@ const Footer = () => {
                 <img src={rockstarLogo}/>
                 <div>
                     <ul className='flex gap-6'>
-                        <li className='text-[#B1B1B1] font-medium text-base leading-[150%] cursor-pointer'>CONTATO</li>
-                        <li className='text-[#B1B1B1] font-medium text-base leading-[150%] cursor-pointer'>SOBRE</li>
-                        <li className='text-[#B1B1B1] font-medium text-base leading-[150%] cursor-pointer'>SUPORTE</li>
-                        <li className='text-[#B1B1B1] font-medium text-base leading-[150%] cursor-pointer'>EMPREGOS</li>
+                        <Link to={"/contact"}> <li className='text-[#B1B1B1] font-medium text-base leading-[150%] cursor-pointer'>CONTATO</li></Link>
+                        <Link to={"/sobre"}><li className='text-[#B1B1B1] font-medium text-base leading-[150%] cursor-pointer'>SOBRE</li></Link>
+                        <Link to={"/support"}><li className='text-[#B1B1B1] font-medium text-base leading-[150%] cursor-pointer'>SUPORTE</li></Link>
+                        <Link to={"/empregos"}><li className='text-[#B1B1B1] font-medium text-base leading-[150%] cursor-pointer'>EMPREGOS</li></Link>
                     </ul>
                     <span className='text-[#B1B1B1] font-light text-[13px]'>©2023 Rockstar Games, Inc. - YWR Studio.</span>
                 </div>

@@ -8,24 +8,23 @@ import backgroundColor from '../../assets/backgroundColor.svg'
 import gamesLauncher from '../../assets/gamesLauncher.svg'
 import secondLogo from '../../assets/secondLogo.svg'
 import GTA6GameCover from '../../assets/gta6cover.jpg'
+// import {useParams} from "react-router-dom";
+import GetGame from "../GetGame/GetGame.tsx";
 
 
 const Content = () => {
 
-    function GetGame(props:any){
-        return(
-            <img className='w-1/5 cursor-pointer' src={props.image} alt={props.value}></img>
-        )
-    }
+    // const number:any= useParams()
+
 
     function GetCover(props:any){
         return(
-            <div className=''>
+            <div className='group'>
                 <div className='w-full overflow-hidden'>
-                    <img className='w-full h-full object-cover rounded-t-2xl rounded-tl-2xl' src={props.image} alt={props.alt}/>
+                    <img className='group-hover:brightness-75 transition-all duration-300 w-full h-full object-cover rounded-t-2xl rounded-tl-2xl' src={props.image} alt={props.alt}/>
                 </div>
 
-                <div className='flex bg-black p-[5%] flex-col gap-3 rounded-b-2xl rounded-bl-2xl'>
+                <div className='flex bg-black p-[3%] flex-col gap-3 rounded-b-2xl rounded-bl-2xl cursor-pointer'>
                     <h1 className='text-white text-[13px] leading-[150%] font-medium'>{props.name}</h1>
                     <span className='text-[#797979] text-[12px] leading-[150%] font-light'>{props.description}</span>
                 </div>
@@ -49,10 +48,10 @@ const Content = () => {
                 </div>
 
                 <div className='w-full flex items-center justify-between'>
-                    <GetGame image={GTA5} name='GTA5'/>
-                    <GetGame image={GTAOnline} name='GTAOnline'/>
-                    <GetGame image={REDII} name='REDII'/>
-                    <GetGame image={REDOnline} name='REDOnline'/>
+                    <GetGame src={GTA5} value='GTA5'/>
+                    <GetGame src={GTAOnline} value='GTAOnline'/>
+                    <GetGame src={REDII} value='REDII'/>
+                    <GetGame src={REDOnline} value='REDOnline'/>
                 </div>
 
                 <button className='text-black bg-[#FCAF17] pr-8 pl-8 pt-3 pb-3 rounded-lg'>Ver todos os jogos</button>
@@ -65,9 +64,9 @@ const Content = () => {
 
                     <div className='rounded-2xl w-2/3'>
                         <div className='w-full'>
-                            <div className='w-full overflow-hidden'>
-                                <img className='w-full rounded-t-2xl object-cover rounded-tl-2xl' src={GTA6GameCover} alt='GTA6Game'/>
-                                <div className='flex bg-black p-[8%] flex-col gap-3 rounded-b-2xl rounded-bl-2xl'>
+                            <div className='group w-full overflow-hidden'>
+                                <img className='group-hover:shadow-black group-hover:brightness-75 transition-all duration-300 w-full rounded-t-2xl object-cover rounded-tl-2xl' src={GTA6GameCover} alt='GTA6Game'/>
+                                <div className='flex bg-black p-[6%] flex-col gap-3 rounded-b-2xl rounded-bl-2xl cursor-pointer'>
                                     <h1 className='text-white text-[32px] leading-[150%] font-medium'>Grand Theft Auto VI - Veja o 1º trailer agora</h1>
                                     <span className='text-[#797979] text-[16px] leading-[150%] font-light'>Rockstar Games 5 de dezembro de 2023</span>
                                 </div>
