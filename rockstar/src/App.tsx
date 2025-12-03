@@ -9,6 +9,7 @@ import Contact from "./components/Contact/Contact.tsx";
 import Sobre from "./components/Sobre/Sobre.tsx";
 import Support from "./components/Support/Support.tsx";
 import Empregos from "./components/Empregos/Empregos.tsx";
+import Jogo from "./components/Jogo/Jogo.tsx";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
         <Route path="/sobre" element={<Sobre />}/>
         <Route path="/support" element={<Support />}/>
         <Route path="/empregos" element={<Empregos />}/>
-        <Route path="/jogos/:number" element={<Empregos />}/>
+        <Route path="/jogos/:number" element={<Jogo />}/>
     </Routes>
   )
 }

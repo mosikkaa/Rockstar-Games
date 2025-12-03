@@ -8,13 +8,11 @@ import backgroundColor from '../../assets/backgroundColor.svg'
 import gamesLauncher from '../../assets/gamesLauncher.svg'
 import secondLogo from '../../assets/secondLogo.svg'
 import GTA6GameCover from '../../assets/gta6cover.jpg'
-// import {useParams} from "react-router-dom";
 import GetGame from "../GetGame/GetGame.tsx";
+import {Link} from "react-router-dom";
 
 
 const Content = () => {
-
-    // const number:any= useParams()
 
 
     function GetCover(props:any){
@@ -41,17 +39,17 @@ const Content = () => {
                 <div className='flex flex-col gap-6 lg:gap-0 lg:flex-row justify-between items-center w-full'>
                     <h1 className='text-white text-5xl font-extrabold'>Jogos em Destaque</h1>
                     <ul className='flex justify-between gap-6'>
-                        <li className='bg-[#606060] rounded-[100px] pt-2 pb-2 pr-4 pl-4 text-white'>PC</li>
-                        <li className='bg-[#606060] rounded-[100px] pt-2 pb-2 pr-4 pl-4 text-white'>Console</li>
-                        <li className='bg-[#606060] rounded-[100px] pt-2 pb-2 pr-4 pl-4 text-white'>Dispositivos Portáteis</li>
+                        <li className='bg-[#606060] text-center content-center rounded-[100px] pt-2 pb-2 pr-4 pl-4 text-white'>PC</li>
+                        <li className='bg-[#606060] text-center content-center rounded-[100px] pt-2 pb-2 pr-4 pl-4 text-white'>Console</li>
+                        <li className='bg-[#606060] text-center content-center rounded-[100px] pt-2 pb-2 pr-4 pl-4 text-white'>Dispositivos Portáteis</li>
                     </ul>
                 </div>
 
                 <div className='w-full flex items-center justify-between'>
-                    <GetGame src={GTA5} value='GTA5'/>
-                    <GetGame src={GTAOnline} value='GTAOnline'/>
-                    <GetGame src={REDII} value='REDII'/>
-                    <GetGame src={REDOnline} value='REDOnline'/>
+                    <Link to={"jogos/1"} className='block w-1/5'><GetGame src={GTA5} value='GTA5'/></Link>
+                    <Link to={"jogos/2"} className='block w-1/5'><GetGame src={GTAOnline} value='GTAOnline'/></Link>
+                    <Link to={"jogos/3"} className='block w-1/5'><GetGame src={REDII} value='REDII'/></Link>
+                    <Link to={"jogos/4"} className='block w-1/5'><GetGame src={REDOnline} value='REDOnline'/></Link>
                 </div>
 
                 <button className='text-black bg-[#FCAF17] pr-8 pl-8 pt-3 pb-3 rounded-lg'>Ver todos os jogos</button>
