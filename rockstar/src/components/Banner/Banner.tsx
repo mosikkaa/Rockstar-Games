@@ -17,7 +17,7 @@ const Banner = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCount(prev => (prev === 2 ? 1 : 2));
-        }, 10000);
+        }, 12000);
 
         return () => clearInterval(interval);
     }, []);
