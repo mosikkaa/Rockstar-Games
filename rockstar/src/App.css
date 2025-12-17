@@ -3,7 +3,3 @@
 button{
     cursor: pointer;
 }
-button:hover{
-    background-color:#C88510;
-    transition-duration: 250ms;
-}

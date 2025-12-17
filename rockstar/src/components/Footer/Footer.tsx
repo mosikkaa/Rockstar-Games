@@ -6,12 +6,13 @@ import facebook from   '../../assets/facebook.svg'
 import youtube from   '../../assets/youtube.svg'
 import "./Footer.css"
 import {Link} from 'react-router-dom'
+import {motion} from 'framer-motion'
 
 const Footer = () => {
     return (
         <footer className='w-full pt-10 pb-10 pl-[6%] pr-[6%] bg-black flex items-center justify-between'>
 
-            <div className='flex-col flex sm:flex-row gap-8'>
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeInOut" }}  className='flex-col flex sm:flex-row gap-8'>
                 <img className='w-12 h-12 sm:w-auto sm:h-auto' src={rockstarLogo}/>
                 <div>
                     <ul className='flex-col sm:flex-row  flex gap-6'>
@@ -22,15 +23,15 @@ const Footer = () => {
                     </ul>
                     <span className='text-[#B1B1B1] font-light text-[13px]'>©2023 Rockstar Games, Inc. - YWR Studio.</span>
                 </div>
-            </div>
+            </motion.div>
 
-            <ul className='flex flex-col sm:flex-row justify-between gap-4'>
+            <motion.ul initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeInOut" }}  className='flex flex-col sm:flex-row justify-between gap-4'>
                 <li className='cursor-pointer'><img src={twitch}/></li>
                 <li className='cursor-pointer'><img src={instagram}/></li>
                 <li className='cursor-pointer'><img src={twitter}/></li>
                 <li className='cursor-pointer'><img src={youtube}/></li>
                 <li className='cursor-pointer'><img src={facebook}/></li>
-            </ul>
+            </motion.ul>
 
         </footer>
     )

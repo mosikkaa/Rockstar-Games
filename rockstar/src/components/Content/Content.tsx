@@ -3,13 +3,14 @@ import GTAOnline from '../../assets/GTAOnline.svg'
 import REDII from '../../assets/REDII.svg'
 import REDOnline from '../../assets/REDOnline.svg'
 import GTACAR from '../../assets/gtacar2.jpg'
-import rockstarTrailer from '../../assets/rockstar.jpg'
+import rockstarTrailer from '../../assets/rockstar.svg'
 import backgroundColor from '../../assets/backgroundColor.svg'
 import gamesLauncher from '../../assets/gamesLauncher.svg'
 import secondLogo from '../../assets/secondLogo.svg'
 import GTA6GameCover from '../../assets/gta6cover.jpg'
 import GetGame from "../GetGame/GetGame.tsx";
 import {Link} from "react-router-dom";
+import {motion} from "framer-motion";
 
 
 const Content = () => {
@@ -17,7 +18,7 @@ const Content = () => {
 
     function GetCover(props:any){
         return(
-            <div className='group'>
+            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeOut" }}  className='group'>
                 <div className='w-full overflow-hidden'>
                     <img className='group-hover:brightness-75 transition-all duration-300 w-full h-full object-cover rounded-t-2xl rounded-tl-2xl' src={props.image} alt={props.alt}/>
                 </div>
@@ -26,7 +27,7 @@ const Content = () => {
                     <h1 className='text-white text-[13px] leading-[150%] font-medium'>{props.name}</h1>
                     <span className='text-[#797979] text-[12px] leading-[150%] font-light'>{props.description}</span>
                 </div>
-            </div>
+            </motion.div>
         )
     }
 
@@ -36,39 +37,39 @@ const Content = () => {
 
             <section className='w-full flex flex-col items-center justify-between gap-8'>
 
-                <div className='flex flex-col gap-6 lg:gap-0 lg:flex-row justify-between items-center w-full'>
+                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeInOut" }}  className='flex flex-col gap-6 lg:gap-0 lg:flex-row justify-between items-center w-full'>
                     <h1 className='text-white text-5xl font-extrabold'>Jogos em Destaque</h1>
                     <ul className='flex justify-between gap-6'>
                         <li className='bg-[#606060] text-center content-center rounded-[100px] pt-2 pb-2 pr-4 pl-4 text-white'>PC</li>
                         <li className='bg-[#606060] text-center content-center rounded-[100px] pt-2 pb-2 pr-4 pl-4 text-white'>Console</li>
                         <li className='bg-[#606060] text-center content-center rounded-[100px] pt-2 pb-2 pr-4 pl-4 text-white'>Dispositivos Portáteis</li>
                     </ul>
-                </div>
+                </motion.div>
 
-                <div className='w-full flex items-center justify-between'>
+                <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeInOut" }} className='w-full flex items-center justify-between'>
                     <Link to={"jogos/1"} className='block w-1/5'><GetGame src={GTA5} value='GTA5'/></Link>
                     <Link to={"jogos/2"} className='block w-1/5'><GetGame src={GTAOnline} value='GTAOnline'/></Link>
                     <Link to={"jogos/3"} className='block w-1/5'><GetGame src={REDII} value='REDII'/></Link>
                     <Link to={"jogos/4"} className='block w-1/5'><GetGame src={REDOnline} value='REDOnline'/></Link>
-                </div>
+                </motion.div>
 
-                <button className='text-black bg-[#FCAF17] pr-8 pl-8 pt-3 pb-3 rounded-lg'>Ver todos os jogos</button>
+                <motion.button initial={{ opacity: 0, y: 30 }} whileHover={{backgroundColor: "#C88510",scale:1.05,transition: { duration: 0.3 }}} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.3, ease: "easeInOut" }} className='text-black bg-[#FCAF17] pr-8 pl-8 pt-3 pb-3 rounded-lg'>Ver todos os jogos</motion.button>
             </section>
 
             <section className='w-full flex flex-col gap-12'>
-                <h1 className='text-5xl font-extrabold text-white'>Últimas Notícias</h1>
+                <motion.h1 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeInOut" }} className='text-5xl font-extrabold text-white'>Últimas Notícias</motion.h1>
 
                 <div className='flex gap-4'>
 
                     <div className='rounded-2xl w-2/3'>
                         <div className='w-full'>
-                            <div className='group w-full overflow-hidden'>
+                            <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeInOut" }}  className='group w-full overflow-hidden'>
                                 <img className='group-hover:shadow-black group-hover:brightness-75 transition-all duration-300 w-full rounded-t-2xl object-cover rounded-tl-2xl' src={GTA6GameCover} alt='GTA6Game'/>
                                 <div className='flex bg-black p-[6%] flex-col gap-3 rounded-b-2xl rounded-bl-2xl cursor-pointer'>
                                     <h1 className='text-white text-[32px] leading-[150%] font-medium'>Grand Theft Auto VI - Veja o 1º trailer agora</h1>
                                     <span className='text-[#797979] text-[16px] leading-[150%] font-light'>Rockstar Games 5 de dezembro de 2023</span>
                                 </div>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
 
@@ -81,17 +82,17 @@ const Content = () => {
                 </div>
             </section>
 
-            <section style={{backgroundImage:`url(${backgroundColor})`}} className={`w-full bg-no-repeat bg-cover gap-8 flex-col md:flex-row flex items-center justify-between pt-10 pb-10 pl-[4%] rounded-2xl`}>
+            <motion.section initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: "easeInOut" }}  style={{backgroundImage:`url(${backgroundColor})`}} className={`w-full bg-no-repeat bg-cover gap-8 flex-col md:flex-row flex items-center justify-between pt-10 pb-10 pl-[4%] rounded-2xl`}>
                 <div className='flex flex-col gap-6 items-start justify-between'>
                     <div className='flex-col lg:items-center lg:flex-row flex items-start gap-6 font-extrabold text-[41.57px] leading-[120%] '>
                         <img src={secondLogo} alt='secondLogo'/>
                         <h1>Games <br/> Launcher</h1>
                     </div>
                     <span className='font-medium text-[32px] leading-[150%]'>Todos os seus jogos <br/> em um só lugar.</span>
-                    <button className='rounded-lg bg-[#FCAF17] shadow-[0px 4px 16px 1px #00000052] font-extrabold text-[20px] leading-[150%] pr-18 pl-18 pt-4 pb-4'>Download</button>
+                    <motion.button whileHover={{backgroundColor: "#C88510",scale:1.00,transition: { duration: 0.4 }}} className='rounded-lg bg-[#FCAF17] shadow-[0px 4px 16px 1px #00000052] font-extrabold text-[20px] leading-[150%] pr-18 pl-18 pt-4 pb-4'>Download</motion.button>
                 </div>
                 <img className='sm:w-[80%] md:w-[60%] h-[80%]' src={gamesLauncher} alt='secondLogo'/>
-            </section>
+            </motion.section>
 
 
         </main>

@@ -1,3 +1,5 @@
+import {motion} from 'framer-motion';
+
 
 type GameProps = {
     src: string,
@@ -6,7 +8,7 @@ type GameProps = {
 
 const GetGame = (props: GameProps)=> {
     return (
-        <img className='transition-transform duration-300 hover:scale-105 w-full cursor-pointer' src={props.src} alt={props.value}></img>
+        <motion.img initial={{ scale: 1 }} whileHover={{ scale: 1.05 }} transition={{ duration: 0.3, ease: "easeInOut" }} className='w-full cursor-pointer' src={props.src} alt={props.value}></motion.img>
     )
 }
 

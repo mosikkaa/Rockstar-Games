@@ -6,6 +6,7 @@ import {useState,useEffect} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
+import {motion} from "framer-motion";
 
 const Header:any = () => {
 
@@ -40,7 +41,7 @@ const Header:any = () => {
             </div>
 
             <div className='flex relative items-center justify-between gap-6'>
-                <Link className='md:flex hidden' to={"/launcher"}><button className='bg-[#FCAF17] pr-5 pl-5 pb-3 pt-3 text-black rounded-xl'>Baixe o Launcher</button></Link>
+                <Link className='md:flex hidden' to={"/launcher"}><motion.button whileHover={{backgroundColor: "#C88510",scale:1.05}} transition={{ duration: 0.25 }} className='bg-[#FCAF17] pr-5 pl-5 pb-3 pt-3 text-black rounded-xl'>Baixe o Launcher</motion.button></Link>
                 <img className='cursor-pointer'  src={search} alt='search'></img>
                 <img className='cursor-pointer' src={login} alt='login'></img>
                 <FontAwesomeIcon icon={faBars} onClick={handleClick} className='md:hidden! text-white block text-3xl cursor-pointer'/>
